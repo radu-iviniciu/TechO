@@ -18,53 +18,58 @@ namespace AmazonGenerator
                 {
                     sb.Append("\t");
                 }
-                _tabs = sb.ToString();                
+                _tabs = sb.ToString();
             }
         } 
 
-        private StreamWriter _file;
+        private StringBuilder sb;
         private int _indetation;
 
         private string _tabs;
+        private StreamWriter _fileStream;
+        private string _tabsDec;
 
         public Writer(StreamWriter stream)
         {
-            _file = stream;
+            _fileStream = stream;
+            sb = new StringBuilder();
             Indetation = 0;
         }
 
-        public void Close()
+        public void WriteToFile()
         {
-            _file.Flush();
-            _file.Close();
+            _fileStream.WriteLine(sb.ToString());
+            _fileStream.Close();
         }
 
         public string Else(bool comit = false)
         {
+            Indetation--;
+            string result = _tabs + "(ELSE) else";
             if (comit)
             {
-                _file.WriteLine(_tabs + "\n"+ _tabs + "else");
+                sb.AppendLine(result);
             }
-            // Indetation--;
-            return " else";
+            Indetation++;
+            return result;            
         }
 
         public string EndIf(bool comit = false)
         {
+            Indetation--;
             if (comit)
             {
-                _file.WriteLine(_tabs + "\n"+ _tabs + "then");
+                sb.AppendLine(_tabs + "(THEN) then");
             }
-            Indetation--;
             return " then";
         }
 
         public string If(string condition, bool comit = false)
         {
-            string res = condition + " " + "\n"+ _tabs + "if";
+            string res = _tabs + "(IF) " + condition + " " + "if";
             if (comit)
             {
-                _file.WriteLine(_tabs + res);
+                sb.AppendLine(_tabs + res);
             }
             Indetation++;
             return res;
@@ -75,7 +80,7 @@ namespace AmazonGenerator
             var not = x + " 1 <";
             if (comit)
             {
-                _file.WriteLine(_tabs + not);
+                sb.AppendLine(_tabs + not);
             }
             return not;
         }
@@ -83,10 +88,10 @@ namespace AmazonGenerator
         // a condininal expresion on the stack
         public string While(string condition, bool comit = false)
         {
-            var res = condition + " \n"+ _tabs + "while";
+            var res = "(WHILE)" + condition + " \n"+ _tabs + "while";
             if (comit)
             {
-                _file.WriteLine(_tabs + res);
+                sb.AppendLine(_tabs + res);
             }
             Indetation++;
             return res;            
@@ -94,11 +99,10 @@ namespace AmazonGenerator
 
         public void Repeat(string condition, bool comit = false)
         {
-
-            var res = condition + "\n"+ _tabs + "repeat";
+            var res = "(REPEAT IF)" + condition + "\n"+ _tabs + "repeat";
             if (comit)
             {
-                _file.WriteLine(_tabs + res);
+                sb.AppendLine(_tabs + res);
             }
             Indetation--;
         }
@@ -108,7 +112,7 @@ namespace AmazonGenerator
             string res = "(" + comment + ")";
             if (comit)
             {
-                _file.WriteLine(_tabs + res);
+                sb.AppendLine(_tabs + res);
             }
             return res;
         }
@@ -118,7 +122,37 @@ namespace AmazonGenerator
             var areEqual = x + " " + y + " >= ";
             if (comit)
             {
-                _file.WriteLine(_tabs + areEqual);
+                sb.AppendLine(_tabs + areEqual);
+            }
+            return areEqual;
+        }
+
+        public string Less(string x, string y, bool comit = false) // 
+        {
+            var areEqual = x + " " + y + " < ";
+            if (comit)
+            {
+                sb.AppendLine(_tabs + areEqual);
+            }
+            return areEqual;
+        }
+
+        public string LessOrEqual(string x, string y, bool comit = false) // 
+        {
+            var areEqual = x + " " + y + " <= ";
+            if (comit)
+            {
+                sb.AppendLine(_tabs + areEqual);
+            }
+            return areEqual;
+        }
+
+        public string Greater(string x, string y, bool comit = false) // 
+        {
+            var areEqual = x + " " + y + " > ";
+            if (comit)
+            {
+                sb.AppendLine(_tabs + areEqual);
             }
             return areEqual;
         }
@@ -128,7 +162,7 @@ namespace AmazonGenerator
             var and = x + " = 1 " + y + " 1 =" + " 1 = ";
             if (comit)
             {
-                _file.WriteLine(_tabs + and);
+                sb.AppendLine(_tabs + and);
             }
             return and;
         }
@@ -138,29 +172,58 @@ namespace AmazonGenerator
             var and = x + " 1 = " + y + " 1 =" + " + 0 > ";
             if (comit)
             {
-                _file.WriteLine(_tabs + and);
+                sb.AppendLine(_tabs + and);
             }
             return and;
         }
 
         // 1 or 0 to Stack
-        public string AreNotEqual(string x, string y, bool comit = false) // 
+        public string NotEqual(string x, string y, bool comit = false) // 
         {
-            var areNotEqual = AreEqual(x, y) + " 1 < ";
+            var areNotEqual = Equal(x, y) + " 1 < ";
 
             if (comit)
             {
-                _file.WriteLine(_tabs + areNotEqual);
+                sb.AppendLine(_tabs + areNotEqual);
             }
             return areNotEqual;
         }
 
-        public string AreEqual(string x, string y, bool comit = false) // 
+        public string Equal(string x, string y, bool comit = false) // 
         {
             var areEqual = x + " " + y + " = ";
             if (comit)
             {
-                _file.WriteLine(_tabs + areEqual);
+                sb.AppendLine(_tabs + areEqual);
+            }
+            return areEqual;
+        }
+
+        public string Add(string x, string y, bool comit = false) // 
+        {
+            var areEqual = x + " " + y + " + ";
+            if (comit)
+            {
+                sb.AppendLine(_tabs + areEqual);
+            }
+            return areEqual;
+        }
+
+        public string Subtract(string x, string y, bool comit = false) // 
+        {
+            var areEqual = x + " " + y + " - ";
+            if (comit)
+            {
+                sb.AppendLine(_tabs + areEqual);
+            }
+            return areEqual;
+        }
+        public string Multiply(string x, string y, bool comit = false) // 
+        {
+            var areEqual = x + " " + y + " * ";
+            if (comit)
+            {
+                sb.AppendLine(_tabs + areEqual);
             }
             return areEqual;
         }
@@ -170,7 +233,7 @@ namespace AmazonGenerator
             var code = "variable " + variable;
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }            
             return code;
         }
@@ -180,7 +243,7 @@ namespace AmazonGenerator
             var code = "variable " + variable + " " + size + " cells";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -191,7 +254,7 @@ namespace AmazonGenerator
             var code = x + " @ 1 + " + x + " ! ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -202,7 +265,7 @@ namespace AmazonGenerator
             var code = x + " @ " + value + " + " + x + " ! ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -212,7 +275,7 @@ namespace AmazonGenerator
             var code = x + " @ " + expresion + " + " + x + " ! ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -223,18 +286,18 @@ namespace AmazonGenerator
             var code = arrayAddr + " " + index + " + @ ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
 
         // no prereq on stack
-        public string SetArrraValue(string arrayAddr, string index, string expresion, bool comit = false)
+        public string SetArrrayValue(string arrayAddr, string index, string expresion, bool comit = false)
         {
             var code = expresion + " " + arrayAddr + " " + index + " + ! ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -243,7 +306,7 @@ namespace AmazonGenerator
         public string Set(string addr, string value, bool comit = false)
         {
             var code = value + " " + addr + " ! ";
-            _file.WriteLine(_tabs + code);
+            sb.AppendLine(_tabs + code);
             return code;
         }
 
@@ -253,7 +316,7 @@ namespace AmazonGenerator
             var code = val + " " + addr + " ! ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -264,7 +327,7 @@ namespace AmazonGenerator
             var code = addr + " @ ";
             if (comit)
             {
-                _file.WriteLine(_tabs + code);
+                sb.AppendLine(_tabs + code);
             }
             return code;
         }
@@ -273,7 +336,7 @@ namespace AmazonGenerator
         {
             if (comit)
             {
-                _file.WriteLine(_tabs + i);
+                sb.AppendLine(_tabs + i);
             }
         }
     }

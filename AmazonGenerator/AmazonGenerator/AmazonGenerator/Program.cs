@@ -79,7 +79,7 @@ namespace AmazonGenerator
             _codeGen.DeclareArray(destinations, 100, true);
 
 
-            _codeGen.If(_codeGen.AreEqual(j, 0.ToString()), true);
+            _codeGen.If(_codeGen.Equal(j, 0.ToString()), true);
             {
                 _codeGen.Set(j, -1, true);
                 _codeGen.Comment("INIT MAP", true);
@@ -111,19 +111,19 @@ namespace AmazonGenerator
             }
             _codeGen.EndIf(true);
 
-            _codeGen.Close();
+            _codeGen.WriteToFile();
         }
 
         int indentation = 0;
 
-        void FindPointsOfInterest(string resultArray, string code, string localCounter)
+        public void FindPointsOfInterest(string resultArray, string code, string localCounter)
         {
             _codeGen.Set(i, 0, true);
             _codeGen.Set(j, 0, true);
             _codeGen.Set(localCounter, 0, true);
 
             var curValue = _codeGen.GetArrayValue(Map, _codeGen.Get(i));
-            var isObjectOfRightCode = _codeGen.AreEqual(curValue, code);
+            var isObjectOfRightCode = _codeGen.Equal(curValue, code);
             var isNotEndOfArray = _codeGen.Get(ObjectCount) + " 3 * " + " " + _codeGen.Get(i) + " > ";
 
             _codeGen.While(isNotEndOfArray, true);
@@ -152,7 +152,7 @@ namespace AmazonGenerator
 
             _codeGen.Set(i, 0, true);
 
-            var isCurentObjectTheRobot = _codeGen.AreNotEqual(_codeGen.GetArrayValue(Map, _codeGen.Get(i)), robotCode);
+            var isCurentObjectTheRobot = _codeGen.NotEqual(_codeGen.GetArrayValue(Map, _codeGen.Get(i)), robotCode);
             var isEndofArray = _codeGen.GreaterEqual(i, _codeGen.Get(ObjectCount) + " 3 * 3 -");
             _codeGen.While(_codeGen.Or(isEndofArray, isCurentObjectTheRobot), true);
             {

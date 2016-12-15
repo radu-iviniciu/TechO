@@ -1,0 +1,2660 @@
+[
+  {
+    "rows": 9,
+    "cols": 9,
+    "player": {
+      "position": {
+        "x": 1,
+        "y": 7
+      },
+      "identifier": "@"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 7,
+          "y": 7
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 2
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      }
+    ]
+  },
+
+  {
+    "rows": 6,
+    "cols": 6,
+    "player": {
+      "position": {
+        "x": 4,
+        "y": 2
+      },
+      "identifier": "@"
+    },
+    "adversary": {
+      "position": {
+        "x": 3,
+        "y": 1
+      },
+      "identifier": "#"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 3
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 3
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "type": "Wall"
+      }
+    ]
+  },
+
+  {
+    "rows": 9,
+    "cols": 9,
+    "player": {
+      "position": {
+        "x": 1,
+        "y": 7
+      },
+      "identifier": "@"
+    },
+    "adversary": {
+      "position": {
+        "x": 1,
+        "y": 1
+      },
+      "identifier": "#"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 5,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 6
+        },
+        "identifier": "B02",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 5
+        },
+        "type": "Storage"
+      }
+    ]
+  },
+  {
+    "rows": 11,
+    "cols": 9,
+    "player": {
+      "position": {
+        "x": 4,
+        "y": 9
+      },
+      "identifier": "@"
+    },
+    "adversary": {
+      "position": {
+        "x": 4,
+        "y": 1
+      },
+      "identifier": "#"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 5,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 6
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 6
+        },
+        "identifier": "B02",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 5
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 5
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 3
+        },
+        "type": "Wall"
+      }
+    ]
+  },
+
+  {
+    "rows": 10,
+    "cols": 7,
+    "player": {
+      "position": {
+        "x": 4,
+        "y": 4
+      },
+      "identifier": "@"
+    },
+    "adversary": {
+      "position": {
+        "x": 1,
+        "y": 3
+      },
+      "identifier": "#"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 2,
+          "y": 5
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 5
+        },
+        "identifier": "B02",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 8
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 7
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "type": "Wall"
+      }
+    ]
+  },
+
+  {
+    "rows": 19,
+    "cols": 10,
+    "player": {
+      "position": {
+        "x": 4,
+        "y": 5
+      },
+      "identifier": "@"
+    },
+    "adversary": {
+      "position": {
+        "x": 1,
+        "y": 1
+      },
+      "identifier": "#"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 5,
+          "y": 7
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 16
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 12
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 12
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 12
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 14
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 16
+        },
+        "identifier": "B04",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 17
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 17
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 11
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 15
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 11
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 11
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 14
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 16
+        },
+        "identifier": "B03",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 18
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 8
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 12
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 16
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 12
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 17
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 15
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 11
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 17
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 9
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 11
+        },
+        "identifier": "B02",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 9
+        },
+        "type": "Wall"
+      }
+    ]
+  },
+  {
+    "rows": 14,
+    "cols": 13,
+    "player": {
+      "position": {
+        "x": 1,
+        "y": 1
+      },
+      "identifier": "@"
+    },
+    "objects": [
+      {
+        "position": {
+          "x": 12,
+          "y": 11
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 12
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 12
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 8
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 2
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 4
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 2,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 11
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 5
+        },
+        "identifier": "B02",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 5
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 1
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 10
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 10
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 2
+        },
+        "identifier": "B01",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 4
+        },
+        "type": "Storage"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 6
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 2
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 0
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 1,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 11
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 7
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 3,
+          "y": 11
+        },
+        "identifier": "B03",
+        "type": "Box"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 13
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 0,
+          "y": 3
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 9
+        },
+        "type": "Wall"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 13
+        },
+        "type": "Wall"
+      }
+    ]
+  }
+]

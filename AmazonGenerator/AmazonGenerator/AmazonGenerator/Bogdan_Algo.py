@@ -179,11 +179,15 @@ def compute_moves(input_rows, input_cols, input_objects_count, input_objects):
     gold_matrix = init_matrix(input_rows, input_cols,
                               input_objects_count, input_objects)
     # pprint_map(gold_matrix)
-    robot = (objects[2], objects[1])
+    robot = (objects[2], objects[1]) # FindRobot (robotX, robotY)
+    
+    # FindBoxes -> lista cu tupla coorondate cutie
     boxes = [(i, j)
              for i in range(rows)
              for j in range(cols)
              if gold_matrix[i][j] == 2]
+
+    # FindDestinations(storage) -> lista cu tupla coorondate destinatie
     storages = [(i, j)
                 for i in range(rows)
                 for j in range(cols)
@@ -205,7 +209,7 @@ def compute_moves(input_rows, input_cols, input_objects_count, input_objects):
                     target = storage
             # print(tabulate(matrix))
             print(str(box) + " -> " + str(target))
-            if (min_storage == 100):
+            if (min_storage == 300):
                 max_iterations += 1
                 continue
             moves = find_moves(matrix, box, target, True)
@@ -260,8 +264,10 @@ def getX(game, concept):
 def getY(game, concept):
     return game[concept]["position"]["y"]
 
+
+# MAIN 
 with open('05_intoTheDarkness.txt') as data_file:
-    data = json.load(data_file)
+    data = json.load(data_file) #array de harti
 
 index = 1
 for game in data:
