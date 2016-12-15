@@ -11,7 +11,7 @@ namespace Tests
     [TestClass]
     public class EmulationTests
     {
-        private static string _testPath = @"D:\Cipix\tech-on\spec\gen.spec.js";
+        private static string _testPath = @"D:\Repos\Cipix\tech-on\spec\gen.spec.js";
 
         private static string _EmulatorTestTemplateHead = @"var emulator = require('../sources/emulator.js');
 var tokenList = require('../sources/tokenize.js').tokenList;
@@ -35,13 +35,12 @@ describe('test', function () {
     });
 });";
 
-        private string solutionsFolder = "D:\\Cipix\\tech-on\\solutions\\";
+        private string solutionsFolder = "D:\\Repos\\Cipix\\tech-on\\solutions\\";
 
         [ClassInitialize]
         public static void TestInit(TestContext context)
         {
-            var testPath = @"D:\Cipix\tech-on\spec\gen.spec.js";
-            File.WriteAllText(testPath, _EmulatorTestTemplateHead + "\n");
+            File.WriteAllText(_testPath, _EmulatorTestTemplateHead + "\n");
         }
 
         [TestMethod]
@@ -57,6 +56,24 @@ describe('test', function () {
 
             // Code To test
             BoolOps(generator);
+        }
+
+        [TestMethod]
+        public void ArrayWorkTest()
+        {
+            string testName = "ArrayOps";
+            Writer generator = new Writer(new StreamWriter(solutionsFolder + testName + ".txt"));
+
+            GenerateTest(
+                testName: testName,
+                stackContent: null,
+                varVal: new[] {
+                                // new Tuple<string, string>("resultArray", "[0, 10, 20, 30, 40, 49, 59, 69, 79, 89]"),
+                                new Tuple<string, string>("localCounter", "30")
+                              });
+
+            // Code To test
+            ArrayWork(generator);
         }
 
         public void BoolOps(Writer generator)
@@ -91,6 +108,7 @@ describe('test', function () {
             var count = "count";
             string resultArray = "resultArray";
 
+            gen.DeclareArray(resultArray, 10, true);
             gen.Declare(localCounter, true);
             gen.Declare(count, true);
             gen.DeclareArray(input, 10, true);
@@ -99,50 +117,41 @@ describe('test', function () {
             gen.Declare(j, true);
 
             gen.Set(i, 0, true);
+            gen.Set(count, 10, true);
             gen.Set(j, 0, true);
             gen.Set(localCounter, 0, true);
 
-            gen.SetArrrayValue(input, 0.ToString(), 1.ToString(), true);
-            gen.SetArrrayValue(input, 1.ToString(), 1.ToString(), true);
-
-            for (int k = 2; k < 10; k++)
+            for (int k = 0; k < 10; k++)
             {
                 gen.SetArrrayValue(input, k.ToString(), (10*k).ToString(), true);
             }
 
             var curValue = gen.GetArrayValue(input, gen.Get(i));
-            var isObjectOfRightCode = gen.Equal(curValue, "3");
-            var isNotEndOfArray = gen.Get(count) + " 3 * " + " " + gen.Get(i) + " > ";
+            var isObjectOfRightCode = gen.Less(curValue, "50");
+            gen.Increment(count, true);
+            var isNotEndOfArray = gen.Less(gen.Get(i), gen.Subtract(gen.Get(count), "1"));
+
+            gen.Set(i, 0, true);
+            gen.Set(j, 0, true);
 
             gen.While(isNotEndOfArray, true);
             {
                 gen.If(isObjectOfRightCode, true);
-                {                    
-                    gen.SetArrrayValue(resultArray, gen.Get(j), gen.GetArrayValue(input, gen.Get(i) + " 1 + "), true);
-                    gen.SetArrrayValue(resultArray, gen.Get(j) + " 1 + ", gen.GetArrayValue(input, gen.Get(i) + " 2 + "), true);
-
-                    gen.Increment(j, 2, true);
-                    gen.Increment(localCounter, true);
+                {
+                    gen.SetArrrayValue(resultArray, gen.Get(j), gen.GetArrayValue(input, gen.Get(i)), true);
                 }
+                gen.Else(true);
+                {
+                    gen.SetArrrayValue(resultArray, gen.Get(j), gen.Subtract(gen.GetArrayValue(input, gen.Get(i)), 1.ToString()), true);                    
+                }                
                 gen.EndIf(true);
-                gen.Increment(i, 3, true);
+                gen.Increment(j, 1, true);
+                gen.Increment(i, 1, true);
             }
             gen.Repeat(isNotEndOfArray, true);
 
-            gen.Set(i, 0, true);
-            gen.Set(j, 0, true);
-        }
-
-        [TestMethod]
-        public void AddTest()
-        {
-            string testName = "AddTest";
-            Writer generator = new Writer(new StreamWriter(solutionsFolder + testName + ".txt"));
-
-            // Write code 
-
-            //
-            GenerateTest(testName,  new int[] { 3 }, new [] { new Tuple<string, string>("x", "3") });
+            gen.Set(localCounter, gen.GetArrayValue(resultArray, 3.ToString(), true));
+            gen.WriteToFile();
         }
 
         private void GenerateTest(string testName, int[] stackContent, Tuple<string, string>[] varVal)
@@ -169,7 +178,14 @@ describe('test', function () {
         {
             foreach (var varVal in variableValueAssertions)
             {
-                sb.AppendLine(@"expect(context.getVariable('" + varVal.Item1 +  "'))" + ".to.be(" + varVal.Item2 + ");");
+                if (varVal.Item2.Contains("["))
+                {
+                    sb.AppendLine(@"expect(context.getArrayVariable('" + varVal.Item1 + "'))" + ".to.be(" + varVal.Item2 + ");");
+                }
+                else
+                {
+                    sb.AppendLine(@"expect(context.getVariable('" + varVal.Item1 + "'))" + ".to.be(" + varVal.Item2 + ");");
+                }
             }
             return sb;
         }

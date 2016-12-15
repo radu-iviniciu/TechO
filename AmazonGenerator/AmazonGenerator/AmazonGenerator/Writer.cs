@@ -66,7 +66,7 @@ namespace AmazonGenerator
 
         public string If(string condition, bool comit = false)
         {
-            string res = _tabs + "(IF) " + condition + " " + "if";
+            string res = "(IF) " + condition + " " + "if";
             if (comit)
             {
                 sb.AppendLine(_tabs + res);
@@ -88,7 +88,7 @@ namespace AmazonGenerator
         // a condininal expresion on the stack
         public string While(string condition, bool comit = false)
         {
-            var res = "(WHILE)" + condition + " \n"+ _tabs + "while";
+            var res = "(WHILE)" + condition + " while";
             if (comit)
             {
                 sb.AppendLine(_tabs + res);
