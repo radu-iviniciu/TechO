@@ -68,7 +68,7 @@ describe('test', function () {
                 testName: testName,
                 stackContent: null,
                 varVal: new[] {
-                                // new Tuple<string, string>("resultArray", "[0, 10, 20, 30, 40, 49, 59, 69, 79, 89]"),
+                                new Tuple<string, string>("resultArray", "[0, 10, 20, 30, 40, 49, 59, 69, 79, 89]"),
                                 new Tuple<string, string>("localCounter", "30")
                               });
 
