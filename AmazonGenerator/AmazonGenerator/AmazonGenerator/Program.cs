@@ -85,7 +85,7 @@ namespace AmazonGenerator
                 _codeGen.Comment("INIT MAP", true);
                 for (int k = 0; k < 9; k++)
                 {
-                    _codeGen.SetArrraValue(Map, k.ToString(), k.ToString(), true);
+                    _codeGen.SetArrrayValue(Map, k.ToString(), k.ToString(), true);
                 }
                 _codeGen.Set(ObjectCount, 3, true);
 
@@ -130,8 +130,8 @@ namespace AmazonGenerator
             {
                 _codeGen.If(isObjectOfRightCode, true);
                 {
-                    _codeGen.SetArrraValue(resultArray, _codeGen.Get(j), _codeGen.GetArrayValue(Map, _codeGen.Get(i) + " 1 + "), true);
-                    _codeGen.SetArrraValue(resultArray, _codeGen.Get(j) + " 1 + ", _codeGen.GetArrayValue(Map, _codeGen.Get(i) + " 2 + "), true);
+                    _codeGen.SetArrrayValue(resultArray, _codeGen.Get(j), _codeGen.GetArrayValue(Map, _codeGen.Get(i) + " 1 + "), true);
+                    _codeGen.SetArrrayValue(resultArray, _codeGen.Get(j) + " 1 + ", _codeGen.GetArrayValue(Map, _codeGen.Get(i) + " 2 + "), true);
 
                     _codeGen.Increment(j, 2, true);
                     _codeGen.Increment(localCounter, true);
