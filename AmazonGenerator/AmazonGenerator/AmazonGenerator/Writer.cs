@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AmazonGenerator
 {
-    class Writer
+    public class Writer
     {
         private int Indetation
         {
@@ -39,11 +39,21 @@ namespace AmazonGenerator
             _file.Close();
         }
 
-        public string EndIf(bool comit)
+        public string Else(bool comit = false)
         {
             if (comit)
             {
-                _file.WriteLine(_tabs + "then");
+                _file.WriteLine(_tabs + "\n"+ _tabs + "else");
+            }
+            // Indetation--;
+            return " else";
+        }
+
+        public string EndIf(bool comit = false)
+        {
+            if (comit)
+            {
+                _file.WriteLine(_tabs + "\n"+ _tabs + "then");
             }
             Indetation--;
             return " then";
@@ -51,7 +61,7 @@ namespace AmazonGenerator
 
         public string If(string condition, bool comit = false)
         {
-            string res = condition + " " + "if";
+            string res = condition + " " + "\n"+ _tabs + "if";
             if (comit)
             {
                 _file.WriteLine(_tabs + res);
@@ -71,9 +81,9 @@ namespace AmazonGenerator
         }
 
         // a condininal expresion on the stack
-        public string While(string condition, bool comit)
+        public string While(string condition, bool comit = false)
         {
-            var res = condition + " while";
+            var res = condition + " \n"+ _tabs + "while";
             if (comit)
             {
                 _file.WriteLine(_tabs + res);
@@ -82,10 +92,10 @@ namespace AmazonGenerator
             return res;            
         }
 
-        public void Repeat(string condition, bool comit)
+        public void Repeat(string condition, bool comit = false)
         {
 
-            var res = condition + " repeat";
+            var res = condition + "\n"+ _tabs + "repeat";
             if (comit)
             {
                 _file.WriteLine(_tabs + res);
@@ -116,6 +126,16 @@ namespace AmazonGenerator
         public string And(string x, string y, bool comit = false)
         {
             var and = x + " = 1 " + y + " 1 =" + " 1 = ";
+            if (comit)
+            {
+                _file.WriteLine(_tabs + and);
+            }
+            return and;
+        }
+
+        public string Or(string x, string y, bool comit = false)
+        {
+            var and = x + " 1 = " + y + " 1 =" + " + 0 > ";
             if (comit)
             {
                 _file.WriteLine(_tabs + and);
@@ -247,6 +267,14 @@ namespace AmazonGenerator
                 _file.WriteLine(_tabs + code);
             }
             return code;
+        }
+
+        public void Push(int i, bool comit = false)
+        {
+            if (comit)
+            {
+                _file.WriteLine(_tabs + i);
+            }
         }
     }
 }

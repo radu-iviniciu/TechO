@@ -15,7 +15,7 @@ namespace AmazonGenerator
         readonly string ObjectCount = "input_objects_count";
         readonly string Objects = "input_objects";
 
-        static readonly string testPath = "01_helloWorld_automatic.txt";
+        static readonly string testPath = "D:\\Cipix\\tech-on\\solutions\\Radu.txt";
 
         static void Main(string[] args)
         {
@@ -26,12 +26,13 @@ namespace AmazonGenerator
 
     class PrgGenerator
     {
-
+        private Writer _codeGen;
+        
         // Predefined
         readonly string Rows = "input_rows";
         readonly string Cols = "input_cols";
-        readonly string ObjectCount = "input_objects_count";
-        readonly string Map = "input_objects";
+        readonly string ObjectCount = "My_input_objects_count";
+        readonly string Map = "My_input_objects";
 
         // Need declaration
         readonly string wallCode = "1";
@@ -55,15 +56,16 @@ namespace AmazonGenerator
         readonly string i = "i";
         readonly string j = "j";
 
-        private Writer _codeGen;
-
         public PrgGenerator(string path)
         {
             _codeGen = new Writer(new StreamWriter(path));
         }
 
         public void GenerateProgram()
-        {
+        {            
+            _codeGen.DeclareArray(Map, 9, true);
+            _codeGen.Declare(ObjectCount, true);
+
             _codeGen.Declare(robotX, true);
             _codeGen.Declare(robotY, true);
             _codeGen.Declare(count, true);
@@ -74,17 +76,40 @@ namespace AmazonGenerator
             _codeGen.Declare(curTargetY, true);
 
             _codeGen.DeclareArray(targets, 100, true);
+            _codeGen.DeclareArray(destinations, 100, true);
 
-            _codeGen.Set(curTargetX, "0 1 -", true);
-            _codeGen.Set(curTargetY, "0 1 -", true);
 
-            FindRobot();
+            _codeGen.If(_codeGen.AreEqual(j, 0.ToString()), true);
+            {
+                _codeGen.Set(j, -1, true);
+                _codeGen.Comment("INIT MAP", true);
+                for (int k = 0; k < 9; k++)
+                {
+                    _codeGen.SetArrraValue(Map, k.ToString(), k.ToString(), true);
+                }
+                _codeGen.Set(ObjectCount, 3, true);
 
-            _codeGen.Comment("Find Targets", true);
-            FindPointsOfInterest(targets, targetCode, count);
+                _codeGen.Comment("INIT MAP", true);
 
-            _codeGen.Comment("Find Destinations", true);
-            FindPointsOfInterest(destinations, destinationCode, count);
+                _codeGen.Set(curTargetX, "0 1 -", true);
+                _codeGen.Set(curTargetY, "0 1 -", true);
+
+                FindRobot();
+
+                _codeGen.Get(robotX, true);
+                _codeGen.Get(robotY, true);
+
+                _codeGen.Comment("Find Targets", true);
+                // FindPointsOfInterest(targets, targetCode, count);
+
+                _codeGen.Comment("Find Destinations", true);
+                // FindPointsOfInterest(destinations, destinationCode, count);
+            }
+            _codeGen.Else(true);
+            {
+                _codeGen.Push(-1, true);
+            }
+            _codeGen.EndIf(true);
 
             _codeGen.Close();
         }
@@ -125,11 +150,14 @@ namespace AmazonGenerator
             _codeGen.Set(robotX, "0 1 -", true);
             _codeGen.Set(robotY, "0 1 -", true);
 
-            var isCurentObjectTheRobot = _codeGen.AreNotEqual(_codeGen.GetArrayValue(Map, _codeGen.Get(i)), robotCode.ToString());
-            _codeGen.While(isCurentObjectTheRobot, true);
+            _codeGen.Set(i, 0, true);
+
+            var isCurentObjectTheRobot = _codeGen.AreNotEqual(_codeGen.GetArrayValue(Map, _codeGen.Get(i)), robotCode);
+            var isEndofArray = _codeGen.GreaterEqual(i, _codeGen.Get(ObjectCount) + " 3 * 3 -");
+            _codeGen.While(_codeGen.Or(isEndofArray, isCurentObjectTheRobot), true);
             {
-                _codeGen.Increment(i, 3, true);
-                _codeGen.Repeat(isCurentObjectTheRobot, true);
+                _codeGen.Increment(i, 1, true);
+                _codeGen.Repeat(isEndofArray, true);
             }
 
             _codeGen.Set(robotX, _codeGen.GetArrayValue(Map, _codeGen.Get(i) + " 1 +"), true);
