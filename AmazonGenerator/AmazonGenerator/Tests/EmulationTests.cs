@@ -76,25 +76,71 @@ describe('test', function () {
             ArrayWork(generator);
         }
 
+        [TestMethod]
+        public void MethodCallTest()
+        {
+            string testName = "MethodCallTest";
+            Writer generator = new Writer(new StreamWriter(solutionsFolder + testName + ".txt"));
+
+            GenerateTest(
+                testName: testName,
+                stackContent: null,
+                varVal: new[] {
+                                new Tuple<string, string>("x", "45")
+                              });
+
+            // Code To test
+            MethodCalTest(generator);
+        }
+
+        public void MethodCalTest(Writer generator)
+        {
+            // variable names
+            var x = "x";
+
+            // Metode
+            var local = "SQTFParameter";
+            generator.BeginMethod("SquareTimesFive", new string[] { local });
+            {
+                var i = "i";
+                generator.Declare(i);
+                generator.Set(i, 0);
+
+                generator.Set(i, 5);
+
+                generator.Return(generator.Multiply(i, generator.Multiply(local, local, false), false));
+            }
+            generator.EndMethod();
+
+            // MAIN
+            generator.Declare(x);
+
+            generator.Set(x, 3);
+            
+            generator.MethodCall("SquareTimesFive", x, new [] { x });
+
+            generator.WriteToFile();
+        }
+
         public void BoolOps(Writer generator)
         {
             var x = "x";
             var y = "y";
-            generator.Declare(y, true);
-            generator.Declare(x, true);
+            generator.Declare(y);
+            generator.Declare(x);
 
-            generator.Set(x, 3, true);
-            generator.Set(y, 4, true);
+            generator.Set(x, 3);
+            generator.Set(y, 4);
 
-            generator.If(generator.Or(generator.GreaterEqual(generator.Get(x), generator.Get(y)), generator.Equal(generator.Get(y), "4")), true);
+            generator.If(generator.Or(generator.GreaterEqual(x, y, false), generator.Equal(y, "4", false), false));
             {
-                generator.Push(1, true);
+                generator.Push(1);
             }
-            generator.Else(true);
+            generator.Else();
             {
-                generator.Push(0, true);
+                generator.Push(0);
             }
-            generator.EndIf(true);
+            generator.EndIf();
 
             generator.WriteToFile();
         }
@@ -109,48 +155,49 @@ describe('test', function () {
             string resultArray = "resultArray";
 
             gen.DeclareArray(resultArray, 10, true);
-            gen.Declare(localCounter, true);
-            gen.Declare(count, true);
+            gen.Declare(localCounter);
+            gen.Declare(count);
             gen.DeclareArray(input, 10, true);
 
-            gen.Declare(i, true);
-            gen.Declare(j, true);
+            gen.Declare(i);
+            gen.Declare(j);
 
-            gen.Set(i, 0, true);
-            gen.Set(count, 10, true);
-            gen.Set(j, 0, true);
-            gen.Set(localCounter, 0, true);
+            gen.Set(i, 0);
+            gen.Set(count, 10);
+            gen.Set(j, 0);
+            gen.Set(localCounter, 0);
 
             for (int k = 0; k < 10; k++)
             {
-                gen.SetArrrayValue(input, k.ToString(), (10*k).ToString(), true);
+                gen.SetArrrayValue(input, k.ToString(), (10*k).ToString());
             }
 
-            var curValue = gen.GetArrayValue(input, gen.Get(i));
-            var isObjectOfRightCode = gen.Less(curValue, "50");
-            gen.Increment(count, true);
-            var isNotEndOfArray = gen.Less(gen.Get(i), gen.Subtract(gen.Get(count), "1"));
+            gen.Increment(count);
 
-            gen.Set(i, 0, true);
-            gen.Set(j, 0, true);
+            var curValue = gen.GetArrayValue(input, i, false);
+            var isObjectOfRightCode = gen.Less(curValue, "50", false);            
+            var isNotEndOfArray = gen.Less(i, gen.Subtract(count, "1", false), false);
 
-            gen.While(isNotEndOfArray, true);
+            gen.Set(i, 0);
+            gen.Set(j, 0);
+
+            gen.While(isNotEndOfArray);
             {
-                gen.If(isObjectOfRightCode, true);
+                gen.If(isObjectOfRightCode);
                 {
-                    gen.SetArrrayValue(resultArray, gen.Get(j), gen.GetArrayValue(input, gen.Get(i)), true);
+                    gen.SetArrrayValue(resultArray, j, gen.GetArrayValue(input, i, false));
                 }
-                gen.Else(true);
+                gen.Else();
                 {
-                    gen.SetArrrayValue(resultArray, gen.Get(j), gen.Subtract(gen.GetArrayValue(input, gen.Get(i)), 1.ToString()), true);                    
+                    gen.SetArrrayValue(resultArray, j, gen.Subtract(gen.GetArrayValue(input, i, false), 1.ToString(), false));                    
                 }                
-                gen.EndIf(true);
-                gen.Increment(j, 1, true);
-                gen.Increment(i, 1, true);
+                gen.EndIf();
+                gen.Increment(j);
+                gen.Increment(i);
             }
-            gen.Repeat(isNotEndOfArray, true);
+            gen.Repeat(isNotEndOfArray);
 
-            gen.Set(localCounter, gen.GetArrayValue(resultArray, 3.ToString(), true));
+            gen.Set(localCounter, gen.GetArrayValue(resultArray, 3.ToString(), false));
             gen.WriteToFile();
         }
 
@@ -180,11 +227,11 @@ describe('test', function () {
             {
                 if (varVal.Item2.Contains("["))
                 {
-                    sb.AppendLine(@"expect(context.getArrayVariable('" + varVal.Item1 + "'))" + ".to.be(" + varVal.Item2 + ");");
+                    sb.AppendLine(@"expect(context.getArrayVariable('" + varVal.Item1 + "'))" + ".to.eql(" + varVal.Item2 + ");");
                 }
                 else
                 {
-                    sb.AppendLine(@"expect(context.getVariable('" + varVal.Item1 + "'))" + ".to.be(" + varVal.Item2 + ");");
+                    sb.AppendLine(@"expect(context.getVariable('" + varVal.Item1 + "'))" + ".to.eql(" + varVal.Item2 + ");");
                 }
             }
             return sb;
